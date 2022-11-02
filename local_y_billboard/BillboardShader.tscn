@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://local_y_billboard/icon2.png" type="Texture" id=2]
+[ext_resource path="res://local_y_billboard/BillboardShader.shader" type="Shader" id=3]
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = ExtResource( 3 )
+shader_param/albedo_tex = ExtResource( 2 )
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform( 0.993736, 0.0236678, -0.109216, -0.0350868, 0.993974, -0.103848, 0.1061, 0.10703, 0.988578, 0, 0, 0 )
+material_override = SubResource( 2 )
+cast_shadow = 0
+texture = ExtResource( 1 )
